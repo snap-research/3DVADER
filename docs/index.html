@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link href="resources/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/bulma.min.css">
+        <link rel="stylesheet" href="./resources/bulma-carousel.min.css">
+	  <style>
+	
+	    .custom-carousel-wrapper {
+	      display: flex;
+	      justify-content: center;
+	    }
+	    .custom-carousel-cond {
+	      width: 1024px;
+	      height: 640px;
+	      align: center;
+	    }
+
+	    .custom-carousel-unceleb {
+	      width: 630px;
+	      height: flex;
+	      align: center;
+	    }
+	
+	    .custom-carousel-uncond {
+	      width: 768px;
+	      height: 640px;
+	      align: center;
+	    }
+	  </style>
+        <link rel="stylesheet" href="./resources/bulma-slider.min.css">
+        <link rel="stylesheet" href="./resources/fontawesome.all.min.css">
+        <link rel="stylesheet" href="./resources/index.css">
+ 
+        <link rel="stylesheet" href="./resources/academicons.min.css">
+
+        <script src="./resources/jquery.min.js"></script>
+        <script defer src="./resources/fontawesome.all.min.js"></script>
+        <script src="./resources/bulma-carousel.min.js"></script>
+        <script src="./resources/bulma-slider.min.js"></script>
+        <script src="./resources/index.js"></script>
+
+ 
+	<title>AutoDecoding Latent 3D Diffusion Models</title>
+
+</head>
+<body>
+
+	<section class="jumbotron text-center">
+            <h1 class="publication-title">3D VADER - AutoDecoding Latent 3D Diffusion Models</h1>
+            <br/>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="http://www.entavelis.com">Evangelos Ntavelis</a><sup>1*</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/">Aliaksandr Siarohin</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://kyleolsz.github.io/">Kyle Olszewski</a><sup>2</sup>,
+              </span> 
+             <span class="author-block">
+                <a href="https://mightychaos.github.io">Chaoyang Wang</a><sup>3</sup>,
+              </span>
+             <span class="author-block">
+                <a href="https://ee.ethz.ch/de/departement/professoren/professoren-kontaktdetails/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a><sup>1,4</sup>,
+              </span>
+             <span class="author-block">
+                <a href="http://www.stulyakov.com/">Sergey Tulyakov</a><sup>2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Computer Vision Lab - ETH Zurich</span>
+              <span class="author-block"><sup>2</sup>Snap Inc.</span>
+              <span class="author-block"><sup>3</sup>CI2CV Lab - CMU</span>
+              <span class="author-block"><sup>4</sup>ESAT - KULeuven</span>
+            </div>
+            <div>
+              <span class="author-block">*Work done while interning at Snap.</span>
+            </div>
+
+	     <div class="column has-text-centered">
+	      <div class="publication-links">
+		<!-- PDF Link. -->
+		<span class="link-block">
+		  <a href="./paper.pdf" class="external-link button is-normal is-rounded is-dark">
+		    <span class="icon">
+		      <i class="fas fa-file-pdf"></i>
+		    </span>
+		    <span>Paper</span>
+		  </a>
+		</span>
+		<span class="link-block">
+		  <a href="http://arxiv.org/abs/2301.11326" class="external-link button is-normal is-rounded is-dark">
+		    <span class="icon">
+		      <i class="ai ai-arxiv"></i>
+		    </span>
+		    <span>arXiv</span>
+		  </a>
+		</span>
+
+    	        <!-- Code Link. -->
+		<span class="link-block">
+		  <a href="https://github.com/snap-research/unsupervised-volumetric-animation"
+		    class="external-link button is-normal is-rounded is-dark">
+		    <span class="icon">
+		      <i class="fab fa-github"></i>
+		    </span>
+		    <span>Code</span>
+		  </a>
+		</span>
+
+		<!-- Dataset Link. -->
+		<span class="link-block">
+		  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+		    <span class="icon">
+		      <i class="fa fa-quote-left"></i>
+		    </span>
+		    <span>Cite</span>
+		  </a>
+	      </div>
+
+ 
+	</section>
+
+        <!-- TL;DR -->
+        <div class="container pt-5">
+           <div class="content has-text-justified">
+	    <div class="teaser">
+              <center>
+	    <p class='lead'>
+		<b>TL;DR</b> <br>
+We generate 3D assets from diverse 2D multi-view datasets by training a <b>3</b>D <b>D</b>iffusion model on the intermediate features of a <b>V</b>olumetric <b>A</b>uto<b>D</b>ecod<b>ER</b>.	
+	    </p>
+	      </center>
+	    </div>
+
+
+
+	  </div>
+	  </div>
+
+
+        <!-- Abstract. -->
+        <div class="container pt-5">
+           <div class="content has-text-justified">
+	    <div class="teaser">
+              <center>
+                      <h2 class="title is-3">Abstract</h2>
+	
+		      <div class="col-md-19">
+			  <img src="./images.png">
+		      </div>
+	      </center>
+	    </div>
+
+            <br/>
+	    <p class='lead'>
+		We present a novel approach to the generation of static and articulated 3D assets that has a 3D <i>autodecoder</i> at its core. The 3D <i>autodecoder</i> framework embeds properties learned from the target dataset in the latent space, which can then be decoded into a volumetric representation for rendering view-consistent appearance and geometry. We then identify the appropriate intermediate volumetric latent space, and introduce robust normalization and de-normalization operations to learn a 3D diffusion from 2D images or monocular videos of rigid or articulated objects. Our approach is flexible enough to use either existing camera supervision or no camera information at all -- instead efficiently learning it during training. Our evaluations demonstrate that our generation results outperform state-of-the-art alternatives on various benchmark datasets and metrics, including multi-view image datasets of synthetic objects, real in-the-wild videos of moving people, and a large-scale, real video dataset of static objects.
+	    </p>
+
+
+	  </div>
+	  </div>
+
+         <!-- Method -->
+        <div class="container pt-5">
+           <div class="content has-text-justified">
+	    <div class="teaser">
+              <center>
+                      <h2 class="title is-3">Method</h2>
+	
+		      <div class="col-md-10">
+			  <img src="./framework.png">
+		      </div>
+	      </center>
+	    </div>
+
+            <br/>
+	    <p class='lead'>
+		Our proposed two-stage framework: Stage 1 trains an autodecoder with two generative components, G1 and G2. It learns to assign each training set object a 1D embedding that is processed by G1 into a latent volumetric space. G2 decodes these volumes into larger radiance volumes suitable for rendering. Note that we are using only 2D supervision to train the autodecoder. In Stage 2, the autodecoder parameters are frozen. Latent volumes generated by G1 are then used to train the 3D denoising diffusion process. At inference time, G1 is not used, as the generated volume is randomly sampled, denoised, and then decoded by G2 for rendering.
+	    </p>
+
+
+	  </div>
+	  </div>
+
+       
+        <div class="container pt-5">
+           <div class="content">
+	    <div>
+                      <h2>Unconditional Generation on Objaverse:</h2>
+		      <p class="lead">We train an unconditional 3D Diffusion model on the Latent Features of a 3D AutoDecoder trained on Objaverse. After 256 diffusion steps, we upsample the generated latent volume to a 64x64x64 RGB-D grid. We produce and show renders at 128x128 from multiple views.</p>
+	    </div>
+            <br/>
+            <div class="custom-carousel-wrapper">
+            <div class="carousel custom-carousel-uncond" style="overflow: hidden">
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_uncond/output_0.mp4" type="video/mp4">
+						</video>			
+			         </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_uncond/output_1.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_uncond/output_2.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_uncond/output_3.mp4" type="video/mp4">
+						</video>			
+				       </div>
+	
+            </div>
+            </div>
+             </div>
+
+
+      
+        <div class="container pt-5">
+           <div class="content">
+	    <div>
+                      <h2 class="title is-3">Text-Driven Generation on Objaverse:</h2>
+		      <p class="lead">We train an text-conditioned 3D Diffusion model on the Latent Features of a 3D AutoDecoder trained on Objaverse. Captions were extracted using MiniGPT4. After 256 diffusion steps, we upsample the generated latent volume to a 64x64x64 RGB-D grid. During diffusion we apply classifier-free guidance with weight 3. We produce and show renders from multiple views.</p>
+		      <p class="lead"> </p>
+	    </div>
+            <br/>
+            <div class="custom-carousel-wrapper">
+            <div class="carousel custom-carousel-cond" style="overflow: hidden">
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_cond/output_0.mp4" type="video/mp4">
+						</video>			
+			         </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_cond/output_1.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_cond/output_2.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_cond/output_3.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+	
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/obj_cond/output_4.mp4" type="video/mp4">
+						</video>			
+			       </div>
+	
+            </div>
+            </div>
+             </div>
+
+       
+        <div class="container pt-5">
+           <div class="content">
+	    <div>
+                      <h2 class="title is-3">Unconditional Generation on MVImgNet:</h2>
+		      <p class="lead">We train an unconditional 3D Diffusion model on the Latent Features of a 3D AutoDecoder trained on MVImgNet. After 256 diffusion steps, we upsample the generated latent volume to a 64x64x64 RGB-D grid. We produce and show renders from multiple views.</p>
+		      <p class="lead">  </p>
+	    </div>
+            <br/>
+            <div class="custom-carousel-wrapper">
+            <div class="carousel custom-carousel-uncond" style="overflow: hidden">
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_uncond/output_0.mp4" type="video/mp4">
+						</video>			
+			         </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_uncond/output_1.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_uncond/output_2.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_uncond/output_3.mp4" type="video/mp4">
+						</video>			
+				       </div>
+	
+            </div>
+            </div>
+             </div>
+
+
+         <div class="container pt-5">
+           <div class="content">
+	    <div>
+                      <h2 class="title is-3">Text-Driven Generation on MVImgNet:</h2> <p class="lead">We train an text-conditioned 3D Diffusion model on the Latent Features of a 3D AutoDecoder trained on MVImgNet. Captions were extracted using MiniGPT4. After 256 diffusion steps, we upsample the generated latent volume to a 64x64x64 RGB-D grid. During diffusion we apply classifier-free guidance with weight 3. We produce and show renders from multiple views.</p>
+	    </div>
+            <br/>
+            <div class="custom-carousel-wrapper">
+            <div class="carousel custom-carousel-cond" style="overflow: hidden">
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_cond/output_0.mp4" type="video/mp4">
+						</video>			
+			         </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_cond/output_1.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_cond/output_2.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_cond/output_3.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+	
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/mvin_cond/output_4.mp4" type="video/mp4">
+						</video>			
+			       </div>
+	
+            </div>
+            </div>
+             </div>
+
+        <div class="container pt-5">
+           <div class="content">
+	    <div>
+                      <h2 class="title is-3">Text-Driven Generation of Articulated Objects on CelebV-Text:</h2>
+		      <p class="lead"> We visualize results novel views at -10, 0, and 10 degrees in the left, middle, and right part respectively . We use a real video to drive the articulated motion of the generated faces. No Camera information is provided to the network; it is inferred during training. We use 256 diffusion steps and classifier-free guidance with weight 3.</p>
+
+	    </div>
+            <br/>
+            <div class="custom-carousel-wrapper">
+            <div class="carousel custom-carousel-cond" style="overflow: hidden">
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/celeb_cond/output_2.mp4" type="video/mp4">
+						</video>			
+			         </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/celeb_cond/output_1.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/celeb_cond/output_0.mp4" type="video/mp4">
+						</video>			
+				       </div>
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/celeb_cond/output_3.mp4" type="video/mp4">
+						</video>			
+				       </div>
+	
+				 <div class="item">
+						<video poster="" autoplay muted loop playsinline controls>
+						      <source src="./media/celeb_cond/output_4.mp4" type="video/mp4">
+						</video>			
+				       </div>
+	
+			       </div>
+	
+            </div>
+            </div>
+             </div>
+
+
+
+
+	 </div>
+         </div>       
+
+    <section class="section" id="bibtex">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div class="cit_cont">
+        <pre class="cit">@article{ntavelis2023_3DVADER,
+    author  = {Ntavelis, Evangelos and Siarohin, Aliaksandr and Olszewski, Kyle and Wang, Chaoyang and  Van Gool, Luc and Tulyakov, Sergey},
+    title   = {AutoDecoding Latent 3D Diffusion Models}
+    journal = {arXiv preprint arXiv:2307.xxxxx},
+    year    = {2023},
+}</pre>
+      </div>
+    </div>
+  </section>
+
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+	We would like to thank Michael Vasilkovsky for preparing the ObjaVerse renderings, and Colin Eles for his support with infrastructure. Moreover, we would like to thank Norman Müller, author of 
+                <a href="https://sirwyver.github.io/DiffRF/">DiffRF</a>
+ paper, for his invaluable help with setting up the DiffRF baseline, the ABO Tables and PhotoShape Chairs datasets, and the evaluation pipeline as well as answering all related questions. A true marvel of a scientist. Finally, Evan would like to thank Claire and Gio for making the best cappuccinos and fueling up this research.
+      </div>
+    </div>
+  </section>
+<
+</body>
+</html>
