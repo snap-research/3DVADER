@@ -2,9 +2,9 @@
 ==================================================
   
 
-[Evangelos Ntavelis](http://www.entavelis.com)1\*, [Aliaksandr Siarohin](https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/)2, [Kyle Olszewski](https://kyleolsz.github.io/)2, [Chaoyang Wang](https://mightychaos.github.io)3, [Luc Van Gool](https://ee.ethz.ch/de/departement/professoren/professoren-kontaktdetails/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html)1,4, [Sergey Tulyakov](http://www.stulyakov.com/)2
+[Evangelos Ntavelis](http://www.entavelis.com)<sup>1\*</sup>, [Aliaksandr Siarohin](https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/)<sup>2</sup>, [Kyle Olszewski](https://kyleolsz.github.io/)<sup>2</sup>, [Chaoyang Wang](https://mightychaos.github.io)<sup>3</sup>, [Luc Van Gool](https://ee.ethz.ch/de/departement/professoren/professoren-kontaktdetails/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html)<sup>1,4</sup>, [Sergey Tulyakov](http://www.stulyakov.com/)<sup>2</sup>
 
-1Computer Vision Lab - ETH Zurich 2Snap Inc. 3CI2CV Lab - CMU 4ESAT - KULeuven
+<sup>1</sup>Computer Vision Lab - ETH Zurich <sup>2</sup>Snap Inc. <sup>3</sup>CI2CV Lab - CMU 4ESAT - KULeuven
 
 \*Work done while interning at Snap.
 
@@ -42,14 +42,14 @@ Source code will be available soon.
 
 BibTeX
 ------
-
+```
 @article{ntavelis2023\_3DVADER,
     author  = {Ntavelis, Evangelos and Siarohin, Aliaksandr and Olszewski, Kyle and Wang, Chaoyang and  Van Gool, Luc and Tulyakov, Sergey},
     title   = {AutoDecoding Latent 3D Diffusion Models}
     journal = {arXiv preprint arXiv:2307.xxxxx},
     year    = {2023},
 }
-
+```
 Acknowledgements
 ----------------
 
