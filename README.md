@@ -4,11 +4,11 @@
 
 [Evangelos Ntavelis](http://www.entavelis.com)1\*, [Aliaksandr Siarohin](https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/)2, [Kyle Olszewski](https://kyleolsz.github.io/)2, [Chaoyang Wang](https://mightychaos.github.io)3, [Luc Van Gool](https://ee.ethz.ch/de/departement/professoren/professoren-kontaktdetails/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html)1,4, [Sergey Tulyakov](http://www.stulyakov.com/)2
 
-1Computer Vision Lab - ETH Zurich 2Snap Inc. 3CI2CV Lab - CMU 4ESAT - KULeuven
+1: Computer Vision Lab - ETH Zurich 2: Snap Inc. 3: CI2CV Lab - CMU 4: ESAT - KULeuven
 
 \*Work done while interning at Snap.
 
-[Project Page](https://snap-research.github.io/3DVADER/) [Paper](./paper.pdf) [arXiv](http://arxiv.org/abs/2301.11326) [Code](https://github.com/snap-research/unsupervised-volumetric-animation) [Cite](#bibtex)
+[Project Page](https://snap-research.github.io/3DVADER/) [Paper](./paper.pdf) [Cite](#bibtex)
 
 **TL;DR**  
 We generate 3D assets from diverse 2D multi-view datasets by training a **3**D **D**iffusion model on the intermediate features of a **V**olumetric **A**uto**D**ecod**ER**.
