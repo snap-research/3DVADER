@@ -4,11 +4,12 @@
 
 [Evangelos Ntavelis](http://www.entavelis.com)<sup>1\*</sup>, [Aliaksandr Siarohin](https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/)<sup>2</sup>, [Kyle Olszewski](https://kyleolsz.github.io/)<sup>2</sup>, [Chaoyang Wang](https://mightychaos.github.io)<sup>3</sup>, [Luc Van Gool](https://ee.ethz.ch/de/departement/professoren/professoren-kontaktdetails/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html)<sup>1,4</sup>, [Sergey Tulyakov](http://www.stulyakov.com/)<sup>2</sup>
 
-<sup>1</sup>Computer Vision Lab - ETH Zurich <sup>2</sup>Snap Inc. <sup>3</sup>CI2CV Lab - CMU 4ESAT - KULeuven
+
+<sup>1</sup>Computer Vision Lab - ETH Zurich <sup>2</sup>Snap Inc. <sup>3</sup>CI2CV Lab - CMU <sup>4</sup>ESAT - KULeuven
 
 \*Work done while interning at Snap.
 
-[Project Page](https://snap-research.github.io/3DVADER/) [Paper](./paper.pdf) [arXiv](http://arxiv.org/abs/2301.11326) [Code](https://github.com/snap-research/unsupervised-volumetric-animation) [Cite](#bibtex)
+[Project Page](https://snap-research.github.io/3DVADER/) [Paper](./paper.pdf) [Cite](#bibtex)
 
 **TL;DR**  
 We generate 3D assets from diverse 2D multi-view datasets by training a **3**D **D**iffusion model on the intermediate features of a **V**olumetric **A**uto**D**ecod**ER**.
