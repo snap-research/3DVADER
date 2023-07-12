@@ -9,7 +9,7 @@
 
 \*Work done while interning at Snap.
 
-[Project Page](https://snap-research.github.io/3DVADER/) [Paper](./paper.pdf) [Cite](#bibtex)
+[Project Page](https://snap-research.github.io/3DVADER/) - [arXiv](https://arxiv.org/abs/2307.05445) - [Paper](https://snap-research.github.io/3DVADER/paper.pdf) - [Cite](#bibtex)
 
 **TL;DR**  
 We generate 3D assets from diverse 2D multi-view datasets by training a **3**D **D**iffusion model on the intermediate features of a **V**olumetric **A**uto**D**ecod**ER**.
@@ -44,11 +44,13 @@ Source code will be available soon.
 BibTeX
 ------
 ```
-@article{ntavelis2023\_3DVADER,
-    author  = {Ntavelis, Evangelos and Siarohin, Aliaksandr and Olszewski, Kyle and Wang, Chaoyang and  Van Gool, Luc and Tulyakov, Sergey},
-    title   = {AutoDecoding Latent 3D Diffusion Models}
-    journal = {arXiv preprint arXiv:2307.xxxxx},
-    year    = {2023},
+@misc{ntavelis2023autodecoding,
+    title={AutoDecoding Latent 3D Diffusion Models},
+    author={Evangelos Ntavelis and Aliaksandr Siarohin and Kyle Olszewski and Chaoyang Wang and Luc Van Gool and Sergey Tulyakov},
+    year={2023},
+    eprint={2307.05445},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
 Acknowledgements
